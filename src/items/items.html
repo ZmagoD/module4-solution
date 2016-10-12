@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-pills">
+      <li><a ui-sref="home">Home</a></li>
+      <li class="active"><a ui-sref="categories">Categories</a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <h3 class="text-center">{{itemList.category.name}}</h3>
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Short Name</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in itemList.items">
+            <td>{{item.short_name}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

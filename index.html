@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="MenuApp">
+  <head>
+    <title>Menu App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Welcome to MenuApp</h1>
+      <button class="btn btn-lg btn-primary"
+              ui-sref="categories">Show Menu Categories</button>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ui-view></ui-view>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular_ui_router.min.js"></script>
+
+  <script src="src/menuApp/menuapp.module.js"></script>
+  <script src="src/data/data.module.js"></script>
+
+
+  <!-- Routes -->
+  <script src="src/routes.js"></script>
+
+  <!-- MenuApp artifacts -->
+  <script src="src/categories/categories.component.js"></script>
+  <script src="src/categories/categories.controller.js"></script>
+  <script src="src/items/items.component.js"></script>
+  <script src="src/items/items.controller.js"></script>
+  <script src="src/data/menudata.service.js"></script>
+
+</body>
+</html>

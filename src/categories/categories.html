@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row text-center">
+    <ul class="nav nav-pills">
+      <li><a ui-sref="home">Home</a></li>
+      <li class="active"><a ui-sref="categories">Categories</a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <br>
+    <div class="col-md-12">
+      <ul class="list-group text-center">
+        <li ng-repeat="category in categoryList.categories" class="list-group-item">
+          <a ui-sref="items({categoryId: category.short_name})"
+             href="/items/{categoryId}">{{category.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
