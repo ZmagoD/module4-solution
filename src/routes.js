@@ -22,16 +22,18 @@
         }
       })
       .state('items', {
-        url: '/items/{categoryId}',
         templateUrl: 'src/items/items.html',
         controller: 'ItemsController as itemList',
         params: {
           categoryId: null
         },
         resolve: {
-          items: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
-            return MenuDataService.getItemsForCategory($stateParams.categoryId);
-          }]
+          items: ['$stateParams',
+                  'MenuDataService',
+                  function($stateParams, MenuDataService) {
+                    return MenuDataService
+                            .getItemsForCategory($stateParams.categoryId);
+                  }]
         }
       });
 
